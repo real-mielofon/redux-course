@@ -22,6 +22,11 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        enforce: "pre",
+        loader: "eslint-loader"
+      },
+      {
+        test: /\.js$/,
         include: [path.resolve(__dirname, "src")],
         exclude: /(node_modules|bower_components)/,
         use: [
