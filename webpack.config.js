@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var NpmInstallPlugin = require('npm-install-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -16,7 +17,10 @@ module.exports = {
       .optimize
       .OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+
+      new NpmInstallPlugin() // <--
+    
   ],
   module: {
     rules: [
