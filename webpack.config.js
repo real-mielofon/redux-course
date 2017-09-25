@@ -52,7 +52,7 @@ module.exports = {
         loader: "style-loader!css-loader!postcss-loader"
       }
     ]
-  },
+  }/*,
   plugins: [
     new webpack.LoaderOptionsPlugin({
       options: {
@@ -61,6 +61,6 @@ module.exports = {
         ]
       }
     })
-  ]
+  ]*/
 
 }
